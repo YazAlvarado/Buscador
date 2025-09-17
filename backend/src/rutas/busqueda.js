@@ -7,9 +7,6 @@ import { buscarArticulosSemantic } from "../servicios/semantic.js";
 
 const router = express.Router();
 
-/**
- * Normaliza un artículo para que siempre tenga strings válidos
- */
 const normalizarArticulo = (articulo, fuente) => ({
   titulo: articulo.titulo ? articulo.titulo.toString() : "Sin título",
   autores: articulo.autores ? articulo.autores.toString() : "Sin autores",
